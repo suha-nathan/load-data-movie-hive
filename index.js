@@ -72,7 +72,7 @@ async function formatMovies() {
       backdrop: `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`,
       runtime: details?.runtime,
       genres: details?.genres,
-      releaseDate: movie.release_date,
+      releaseDate: new Date(movie.release_date),
     };
 
     formattedMovies.push(object);

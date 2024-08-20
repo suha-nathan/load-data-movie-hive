@@ -16,7 +16,7 @@ const movieSchema = new mongoose.Schema(
     backdrop: String,
     runtime: Number,
     genres: [String],
-    releaseDate: String,
+    releaseDate: Date,
   },
   { timestamps: true }
 );
