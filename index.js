@@ -1,9 +1,14 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
 import Movie from "./models/movie.model.js";
 import List from "./models/list.model.js";
-import movies from "./movies.js"; // will be changed to api call from tmdb database
-import lists from "./lists.js";
-import dotenv from "dotenv";
+import Review from "./models/review.model.js";
+
+import movies from "./data/movies.js"; // will be changed to api call from tmdb database
+import lists from "./data/lists.js";
+import reviews from "./data/reviews.js";
+
 dotenv.config();
 
 // Helper function to introduce a delay
@@ -154,4 +159,27 @@ const processListData = async () => {
   }
 };
 
-processListData();
+const processReviewData = async () => {
+  try {
+    await connectToDB();
+    let counter = 0;
+
+    for (const item of reviews) {
+      console.log("Processing Review: ", counter++);
+      const review = await Review.create(item);
+      if (!review) {
+        console.log("Review not created");
+      }
+      await delay(500);
+    }
+    console.log("DONE processing reviews. Exiting....");
+    return null;
+  } catch (error) {
+    console.error("ERROR loading reviews into DB: ", error);
+  } finally {
+    await mongoose.disconnect();
+    console.log("Disconnected from MongoDB");
+  }
+};
+
+processReviewData();
