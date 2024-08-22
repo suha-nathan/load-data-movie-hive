@@ -131,9 +131,21 @@ const processMovieData = async () => {
   }
 };
 
-processListData = async () => {
+const processListData = async () => {
   try {
     await connectToDB();
+    let counter = 0;
+
+    for (const item of lists) {
+      console.log("Processing List Item: ", counter++);
+      const listItem = await List.create(item);
+      if (!listItem) {
+        console.log("List Item not created");
+      }
+      await delay(500);
+    }
+    console.log("DONE processing lists. Exiting....");
+    return null;
   } catch (error) {
     console.error("ERROR loading lists into DB: ", error);
   } finally {
@@ -142,4 +154,4 @@ processListData = async () => {
   }
 };
 
-processData();
+processListData();
