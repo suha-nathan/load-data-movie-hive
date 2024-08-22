@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import Movie from "./models/movie.model.js";
+import List from "./models/list.model.js";
 import movies from "./movies.js"; // will be changed to api call from tmdb database
+import lists from "./lists.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -96,7 +98,7 @@ const connectToDB = async () => {
   }
 };
 
-const processData = async () => {
+const processMovieData = async () => {
   try {
     let finalMovies = await formatMovies();
 
@@ -123,6 +125,17 @@ const processData = async () => {
     return null;
   } catch (error) {
     console.error("ERROR loading movies into DB: ", error);
+  } finally {
+    await mongoose.disconnect();
+    console.log("Disconnected from MongoDB");
+  }
+};
+
+processListData = async () => {
+  try {
+    await connectToDB();
+  } catch (error) {
+    console.error("ERROR loading lists into DB: ", error);
   } finally {
     await mongoose.disconnect();
     console.log("Disconnected from MongoDB");
