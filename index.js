@@ -111,7 +111,7 @@ const processMovieData = async () => {
     let counter = 0;
 
     for (const movie of finalMovies) {
-      console.log("Processing Movie: ", counter++);
+      console.log("Processing Movie: ", ++counter);
       //prevent duplication by skipping tmdb ID:
       const movieObject = await Movie.findOne({ tmdbID: movie.tmdbID });
 
@@ -142,7 +142,7 @@ const processListData = async () => {
     let counter = 0;
 
     for (const item of lists) {
-      console.log("Processing List Item: ", counter++);
+      console.log("Processing List Item: ", ++counter);
       const listItem = await List.create(item);
       if (!listItem) {
         console.log("List Item not created");
@@ -165,7 +165,7 @@ const processReviewData = async () => {
     let counter = 0;
 
     for (const item of reviews) {
-      console.log("Processing Review: ", counter++);
+      console.log("Processing Review: ", ++counter);
       const review = await Review.create(item);
       if (!review) {
         console.log("Review not created");

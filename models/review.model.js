@@ -10,7 +10,7 @@ const reviewSchema = new mongoose.Schema(
     dateWatched: { type: Date },
     isSpoiler: Boolean,
     tags: [String],
-    movieId: {
+    movie: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Movie",
     },
