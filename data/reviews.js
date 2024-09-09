@@ -6,8 +6,7 @@ const reviews = [
     isSpoiler: false,
     tags: ["action", "comedy"],
     movie: "66c4d9d7c64833f69da69e1f",
-    reviewer: "66c68e43d2a876ecce15392f",
-    comments: [],
+    reviewer: "66df5fc49ed71f87caca1d6e",
     numStars: 4,
   },
   {
@@ -17,8 +16,7 @@ const reviews = [
     isSpoiler: true,
     tags: ["drama", "tearjerker"],
     movie: "66c4d9c6c64833f69da69dcb",
-    reviewer: "66c3adc4e1c5abc3fc33907a",
-    comments: [],
+    reviewer: "66df5cfc9ed71f87cabe9edc",
     numStars: 5,
   },
   {
@@ -28,8 +26,7 @@ const reviews = [
     isSpoiler: false,
     tags: ["sequel", "adventure"],
     movie: "66c4d9cdc64833f69da69def",
-    reviewer: "66c68e43d2a876ecce15392f",
-    comments: [],
+    reviewer: "66df5fc49ed71f87caca1d6e",
     numStars: 3,
   },
   {
@@ -39,8 +36,7 @@ const reviews = [
     isSpoiler: false,
     tags: ["predictable", "fun"],
     movie: "66c4d9d4c64833f69da69e10",
-    reviewer: "66c3adc4e1c5abc3fc33907a",
-    comments: [],
+    reviewer: "66df5cfc9ed71f87cabe9edc",
     numStars: 4,
   },
   {
@@ -50,8 +46,7 @@ const reviews = [
     isSpoiler: true,
     tags: ["favorite", "must-watch"],
     movie: "66c4d9dbc64833f69da69e34",
-    reviewer: "66c68e43d2a876ecce15392f",
-    comments: [],
+    reviewer: "66df5fc49ed71f87caca1d6e",
     numStars: 5,
   },
   {
@@ -61,8 +56,7 @@ const reviews = [
     isSpoiler: false,
     tags: ["disappointing", "flat"],
     movie: "66c4d9cac64833f69da69ddd",
-    reviewer: "66c3adc4e1c5abc3fc33907a",
-    comments: [],
+    reviewer: "66df5cfc9ed71f87cabe9edc",
     numStars: 2,
   },
   {
@@ -72,8 +66,7 @@ const reviews = [
     isSpoiler: false,
     tags: ["visuals", "weak story"],
     movie: "66c4d9d2c64833f69da69e07",
-    reviewer: "66c68e43d2a876ecce15392f",
-    comments: [],
+    reviewer: "66df5fc49ed71f87caca1d6e",
     numStars: 4,
   },
   {
@@ -83,8 +76,7 @@ const reviews = [
     isSpoiler: false,
     tags: ["thrilling", "adventure"],
     movie: "66c4d9d5c64833f69da69e16",
-    reviewer: "66c3adc4e1c5abc3fc33907a",
-    comments: [],
+    reviewer: "66df5cfc9ed71f87cabe9edc",
     numStars: 5,
   },
   {
@@ -94,8 +86,7 @@ const reviews = [
     isSpoiler: false,
     tags: ["long", "slow"],
     movie: "66c4d9c9c64833f69da69dda",
-    reviewer: "66c68e43d2a876ecce15392f",
-    comments: [],
+    reviewer: "66df5fc49ed71f87caca1d6e",
     numStars: 3,
   },
   {
@@ -105,9 +96,9 @@ const reviews = [
     isSpoiler: false,
     tags: ["remake", "classic"],
     movie: "66c4d9d0c64833f69da69dfe",
-    reviewer: "66c3adc4e1c5abc3fc33907a",
-    comments: [],
+    reviewer: "66df5cfc9ed71f87cabe9edc",
     numStars: 4,
   },
 ];
+
 export default reviews;

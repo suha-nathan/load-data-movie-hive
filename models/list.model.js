@@ -15,12 +15,6 @@ const listSchema = new mongoose.Schema(
         ref: "Movie",
       },
     ],
-    comments: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Comment",
-      },
-    ],
   },
   { timestamps: true }
 );
